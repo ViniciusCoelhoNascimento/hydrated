@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Hydrated</title>
 </head>
 <body>
     <div class="container">
+
+        <div class="input-group">
+            <p for="volume">Qual o volume da garrafa?</p><input id="volume" type="number"><p>mL</p>
+        </div>
+
+        <div class="input-group">
+            <p for="meta">Qual sua meta diária?</p><input id="meta" type="number"><p>mL</p>
+        </div>
+
+        <p>Unidades tomadas:</p>
+        <div class="data-view">
+            <p class="unit">0</p>
+        </div>
+
+        <div class="btn-container">
+            <button id="increaseBtn" class="btn">+</button>
+            <button id="descreaseBtn" class="btn">-</button>
+        </div>
+
+ 
         <div class="bottle">
-            
+            <div class="input-group">
+                <p id="qtd" class="qtd">0</p><p>L</p>
+            </div>
         </div>
 
     </div>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>

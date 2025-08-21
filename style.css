@@ -1,3 +1,75 @@
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+input {
+    width: 50px;
+    font-size: large;
+}
+
+p {
+    font-size: large;
+    margin: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .bottle {
     border: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: lightblue;
+    width: 200px;
+    height: 350px;
+}
+
+.data-view {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.unit {
+    font-size: xx-large;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
 }

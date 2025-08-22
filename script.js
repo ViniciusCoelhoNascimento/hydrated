@@ -3,6 +3,7 @@ const descreaseBtn = document.getElementById('descreaseBtn');
 const unitDisplay = document.querySelector('.unit');
 const volumeInput = document.getElementById('volume');
 const qtd = document.getElementById('qtd');
+const dailyGoal = document.getElementById('dailyGoal');
 
 let units = 0;
 function updateDisplay() {
@@ -15,31 +16,54 @@ function updateQtd(){
     qtd.textContent = total;
 }
 
+async function updateWaterLevel() {
+    const bottle = document.getElementById('bottle');
+    const fltVolume = parseFloat(volumeInput.value) || 0;
+    const totalWater = units * fltVolume;
+    const fltDailyGoal = parseFloat(dailyGoal.value)
+
+    let percentage = (100 * totalWater)/fltDailyGoal;
+
+    bottle.style.background = `linear-gradient(to top, lightblue ${percentage}%, white 0%)`;
+}
+
+function updateAll(){
+    updateDisplay();
+    updateQtd();
+    updateWaterLevel();
+}
+
 //Event Listeners
 increaseBtn.addEventListener('click', () => {
     units++;
-    updateDisplay();
-    updateQtd();
+    updateAll();
 });
 
 descreaseBtn.addEventListener('click', ()=>{
     if (units > 0){
         units--;
-        updateDisplay();
-        updateQtd();
+        updateAll();
     }
 });
 
 document.addEventListener('DOMContentLoaded', function(){
     const volumeInput = document.getElementById('volume');
-    const volumeSalved = localStorage.getItem('volumeGarrafa');
+    const volumeSaved = localStorage.getItem('volumeGarrafa');
 
-    if (volumeSalved) {
-        volumeInput.value = volumeSalved;
+    if (volumeSaved) {
+        volumeInput.value = volumeSaved;
+    }
+
+    if (dailyGoal) {
+        dailyGoal.value = localStorage.getItem('dailyGoal');
     }
 
     volumeInput.addEventListener('input', function() {
         localStorage.setItem('volumeGarrafa', this.value);
+    });
+
+    dailyGoal.addEventListener('input', function() {
+        localStorage.setItem('dailyGoal', this.value);
     });
 });
 

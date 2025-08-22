@@ -5,8 +5,9 @@ html, body {
 }
 
 input {
-    width: 50px;
+    width: 60px;
     font-size: large;
+    text-align: right;
 }
 
 p {
@@ -33,7 +34,6 @@ p {
     border: 1px;
     border-style: solid;
     border-color: black;
-    background-color: lightblue;
     width: 200px;
     height: 350px;
 }

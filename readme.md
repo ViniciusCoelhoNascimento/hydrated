@@ -1,4 +1,3 @@
-->guardar informações
-->usar meta para preencher a garrafa virtual
+
 ->melhorar formação dos valores mostrados
 ->trabalhar o design

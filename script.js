@@ -29,3 +29,17 @@ descreaseBtn.addEventListener('click', ()=>{
         updateQtd();
     }
 });
+
+document.addEventListener('DOMContentLoaded', function(){
+    const volumeInput = document.getElementById('volume');
+    const volumeSalved = localStorage.getItem('volumeGarrafa');
+
+    if (volumeSalved) {
+        volumeInput.value = volumeSalved;
+    }
+
+    volumeInput.addEventListener('input', function() {
+        localStorage.setItem('volumeGarrafa', this.value);
+    });
+});
+

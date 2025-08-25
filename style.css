@@ -1,7 +1,10 @@
 
 html, body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     height: 100%;
+    font-family: "Inter";
 }
 
 input {
@@ -13,6 +16,75 @@ input {
 p {
     font-size: large;
     margin: 5px;
+}
+
+h1 {
+    color: white;
+}
+
+.main-header-container{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #3571F8;
+}
+
+span {
+    font-weight: bold;
+}
+
+.rodape {
+    color: white;
+    background-color: #3571F8;
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    gap: 5px;
+}
+
+.rodape a {
+    color: white;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: #f0f0f0;
+}
+.main-header-container a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main-header-container li {
+    list-style: none;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.highlight {
+    margin: 0 !important;
+    font-weight: bold;
 }
 
 .input-group {

@@ -24,7 +24,7 @@ async function updateWaterLevel() {
 
     let percentage = (100 * totalWater)/fltDailyGoal;
 
-    bottle.style.background = `linear-gradient(to top, lightblue ${percentage}%, white 0%)`;
+    bottle.style.background = `linear-gradient(to top, #AADBF8 ${percentage}%, white 0%)`;
 }
 
 function updateAll(){

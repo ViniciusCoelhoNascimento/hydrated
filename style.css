@@ -1,10 +1,13 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 html, body {
     display: flex;
     flex-direction: column;
     margin: 0;
     height: 100%;
-    font-family: "Inter";
+    font-family: 'Poppins', sans-serif;
+    background-color: #FBFCFF;
 }
 
 input {
@@ -16,6 +19,7 @@ input {
 p {
     font-size: large;
     margin: 5px;
+    color: #414145;
 }
 
 h1 {
@@ -29,6 +33,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     background-color: #3571F8;
+    border-radius: 20px 20px 0 0;
 }
 
 span {
@@ -36,22 +41,22 @@ span {
 }
 
 .rodape {
-    color: white;
-    background-color: #3571F8;
+    color: grey;
     display: flex;
     flex-direction: row;
     align-items: top;
     justify-content: center;
     gap: 5px;
+    border-radius: 0 0 20px 20px;
 }
 
 .rodape a {
-    color: white;
+    color: #414145;
     text-decoration: none;
 }
 
 .rodape a:hover {
-    color: #f0f0f0;
+    /*color: #f0f0f0;*/
 }
 .main-header-container a {
     color: white;
@@ -90,36 +95,49 @@ span {
 .input-group {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
+    padding-top: 10px;
+    align-self: flex-start;
 }
 
 .container {
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: auto;
+    align-self: center;
 }
 
 .bottle {
-    border: 1px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px;
     border-style: solid;
-    border-color: black;
+    border-color: #E8ECEF;
     width: 200px;
     height: 350px;
+    border-radius: 20px;
 }
 
 .data-view {
-    border: 1px;
-    border-style: solid;
-    border-color: black;
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 5px;
+}
+
+.data-view p {
+    font-weight: bold;
+    font-size: 38px;
 }
 
 .unit {
@@ -139,9 +157,10 @@ span {
     border-radius: 100%;
     width: 25px;
     height: 25px;
-    background-color: gray;
+    background-color: #E8ECEF;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: x-large;
+    border: none;
 }

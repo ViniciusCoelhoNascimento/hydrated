@@ -33,6 +33,11 @@ function updateAll(){
     updateWaterLevel();
 }
 
+async function loadComponent(id, file) {
+    const response = await fetch(file);
+    document.getElementById(id).innerHTML = await response.text();    
+}
+
 //Event Listeners
 increaseBtn.addEventListener('click', () => {
     units++;

@@ -164,3 +164,7 @@ span {
     font-size: x-large;
     border: none;
 }
+
+.chart {
+    width: 60%;
+}

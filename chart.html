@@ -16,15 +16,39 @@
     loadComponent("header", "header.html");
     loadComponent("footer", "footer.html");
 
+    let registries = JSON.parse(localStorage.getItem('registries')) || [];
+    let labels = registries.map(item => item.date);
+    let values = registries.map(item => item.qtd);
+
     new Chart(document.getElementById('myChart'), {
-        type: 'bar',
-        data: {
-            labels: ['Janeiro', 'Fevereiro'],
-            datasets: [{
-                label: 'Vendas',
-                data: [12,19],
-                backgroundColor: ['#4CAF50', '#2196F3']
-            }]
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Quantidade de Água (mL)',
+            data: values,
+            backgroundColor: '#3571F8',
+            borderColor: '#3571F8',
+            borderWidth: 2,
+            pointBackgroundColor: '#3571F8',
+            tension: 0.1
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    stepSize: 1,
+                    precision: 0
+                }
+            }
         }
-    });
+    }
+});
 </script>

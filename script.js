@@ -31,11 +31,31 @@ function updateAll(){
     updateDisplay();
     updateQtd();
     updateWaterLevel();
+    updateRegistries();
+    localStorage.setItem('unit', document.getElementById('unit').textContent);
 }
 
 async function loadComponent(id, file) {
     const response = await fetch(file);
     document.getElementById(id).innerHTML = await response.text();    
+}
+
+function updateRegistries(){
+    const today = new Date();
+    const qtd = parseInt(document.querySelector('.unit').textContent) || 0;
+    const date = today.toISOString().split("T")[0];
+
+    let registries = JSON.parse(localStorage.getItem("registries")) || [];
+    
+    const existingIndex = registries.findIndex(entry => entry.date === date);
+    
+    if (existingIndex !== -1) {
+        registries[existingIndex].qtd = qtd;
+    } else {
+        registries.push({qtd: qtd, date: date});
+    }
+
+    localStorage.setItem("registries", JSON.stringify(registries));
 }
 
 //Event Listeners
@@ -68,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     dailyGoal.addEventListener('input', function() {
-        localStorage.setItem('dailyGoal', this.value);
+        localStorage.setItem('volumeGarrafa', this.value);
     });
 });
-

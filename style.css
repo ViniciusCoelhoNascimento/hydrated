@@ -11,9 +11,18 @@ html, body {
 }
 
 input {
-    width: 60px;
     font-size: large;
+}
+
+.input-with-unit input {
+    width: 60px;
     text-align: right;
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 p {
@@ -40,11 +49,23 @@ span {
     font-weight: bold;
 }
 
+main {
+    flex: 1 0 auto;
+    padding: 20px;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
 .rodape {
     color: grey;
     display: flex;
     flex-direction: row;
-    align-items: top;
+    align-items:start;
     justify-content: center;
     gap: 5px;
     border-radius: 0 0 20px 20px;
@@ -96,8 +117,8 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
-    align-self: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .container {

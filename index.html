@@ -5,42 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Hydrated</title>
 </head>
 <body>
 
     <div id="header"></div>
+    <main>
+        <div class="container">
+            <div>
+                <div class="input-group">
+                    <p for="volume">Qual o volume da garrafa?</p>
+                    <div class="input-with-unit">
+                        <input id="volume" type="number">
+                        <p>mL</p>
+                    </div>
+                </div>
 
-    <div class="container">
-
-        <div class="input-group">
-            <p for="volume">Qual o volume da garrafa?</p><input id="volume" type="number"><p>mL</p>
-        </div>
-
-        <div class="input-group">
-            <p for="dailyGoal">Qual sua meta diária?</p><input id="dailyGoal" type="number"><p>mL</p>
-        </div>
-
-        <p>Vezes que bebeu:</p>
-        <div class="data-view">
-            <p id="unit" class="unit">0</p>
-        </div>
-
-        <div class="btn-container">
-            <button id="increaseBtn" class="btn">+</button>
-            <button id="descreaseBtn" class="btn">-</button>
-        </div>
-
- 
-        <div id="bottle" class="bottle">
-            <div class="input-group">
-                <p id="qtd" class="qtd">0</p><p>mL</p>
+                <div class="input-group">
+                    <p for="dailyGoal">Qual sua meta diária?</p>
+                    <div class="input-with-unit">
+                        <input id="dailyGoal" type="number">
+                        <p>mL</p>
+                    </div>
+                </div>
             </div>
+
+            <p>Vezes que bebeu:</p>
+            <div class="data-view">
+                <p id="unit" class="unit">0</p>
+            </div>
+
+            <div class="btn-container">
+                <button id="increaseBtn" class="btn">+</button>
+                <button id="descreaseBtn" class="btn">-</button>
+            </div>
+
+    
+            <div id="bottle" class="bottle">
+                <div class="input-group">
+                    <p id="qtd" class="qtd">0</p><p>mL</p>
+                </div>
+            </div>
+
         </div>
-
-    </div>
-
+    </main>
     <div id="footer"></div>
 
     <script src="script.js"></script>

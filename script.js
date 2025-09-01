@@ -74,13 +74,20 @@ descreaseBtn.addEventListener('click', ()=>{
 document.addEventListener('DOMContentLoaded', function(){
     const volumeInput = document.getElementById('volume');
     const volumeSaved = localStorage.getItem('volumeGarrafa');
+    const unitSaved = localStorage.getItem('unit');
+    const dailyGoalSaved = localStorage.getItem('dailyGoal');
+
 
     if (volumeSaved) {
         volumeInput.value = volumeSaved;
     }
 
-    if (dailyGoal) {
+    if (dailyGoalSaved) {
         dailyGoal.value = localStorage.getItem('dailyGoal');
+    }
+
+    if (unitSaved) {
+        unitDisplay.textContent = unitSaved;
     }
 
     volumeInput.addEventListener('input', function() {
@@ -88,6 +95,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     dailyGoal.addEventListener('input', function() {
-        localStorage.setItem('volumeGarrafa', this.value);
+        localStorage.setItem('dailyGoal', this.value);
     });
 });

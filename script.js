@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     if (unitSaved) {
         unitDisplay.textContent = unitSaved;
+        units = unitSaved;
+        updateAll();
     }
 
     volumeInput.addEventListener('input', function() {
